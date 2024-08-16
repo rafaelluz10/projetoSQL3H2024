@@ -28,12 +28,17 @@ email varchar(100) not null,
 cnpj char(17) not null unique,
 primary key(codForn));
 
+
+
+
 create table tbClientes(
 codCli int not null auto_increment,
 nome varchar(100) not null,
 email varchar(100),
 telCelular char(10),
 primary key(codCli));
+
+
 
 create table tbUsuarios(
 codUsu int not null auto_increment,
@@ -42,6 +47,8 @@ senha varchar(10) not null,
 codFunc int not null,
 primary key(codUsu),
 foreign key(codFunc)references tbFuncionarios(codFunc));
+
+
 
 create table tbProdutos(
 codProd int not null auto_increment,
@@ -82,7 +89,19 @@ desc tbVendas;
 -- Inserindo registros nas tabelas -- 
 
 insert into tbFuncionarios(nome,email,cpf,sexo,salario,nascimento,telCelular)values('Rafael Luz', 'rafael.luztp1@gmail.com', '432.312.313-12', 'M',1500.00,'1999/10/10','97738-5088');
+insert into tbFuncionarios(nome,email,cpf,sexo,salario,nascimento,telCelular)values('Jose Antonio', 'joseleal@gmail.com', '324.543.123-12', 'M',1900.00,'1999/10/05','95342-5088');
 
+insert into tbFornecedores(nome,email,cnpj)values('Magazine Luiza','magalu@gmail.com', '25.649.253.1027/25');
+
+insert into tbClientes(nome,email,telCelular)values('Lais Lima','laislima@gmail.com','944890124');
+insert into tbClientes(nome,email,telCelular)values('Julia Maria','juhmah@outlook.com','955790124');
+insert into tbClientes(nome,email,telCelular)values('Marcela Trega','marcela2@gmail.com','977905344');
+
+insert into tbUsuarios(nome,senha,codFunc)values('jose.cianci','123456',1);
+insert into tbUsuarios(nome,senha,codFunc)values('marcela.trega','654321',2);
 
 -- visualizando os registros das tabelas -- 
 select * from tbFuncionarios; 
+select * from tbFornecedores; 
+select * from tbClientes;
+select * from tbUsuarios; 
