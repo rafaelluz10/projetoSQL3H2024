@@ -110,7 +110,9 @@ insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntra
 insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)values('Bolo de Cenoura',100,10.00,'2024/12/25','2024/10/10','10:30:00',2);
 insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)values('Martelo do Thor',1,150.00,'2099/05/20','2024/08/16','19:55:00',1);
 
-insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','19:57:00',10,2,3,4);	
+insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','19:57:00',10,2,3,4);
+insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','20:01:00',3,2,3,1);
+insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','20:02:00',6,2,3,1);	
 
 -- visualizando os registros das tabelas -- 
 select * from tbFuncionarios; 
