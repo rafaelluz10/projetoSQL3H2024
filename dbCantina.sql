@@ -106,13 +106,14 @@ insert into tbUsuarios(nome,senha,codFunc)values('jose.cianci','123456',1);
 insert into tbUsuarios(nome,senha,codFunc)values('marcela.trega','654321',2);
 
 insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)values('Mesas Martinelli',15,850.00,'2024/10/10','2020/08/16','19:50:55',1);
+   
 insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)values('Brinquedo Chuqqy',10,20.000,'2024/05/05','2020/08/16','23:50:55',2);
 insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)values('Bolo de Cenoura',100,10.00,'2024/12/25','2024/10/10','10:30:00',2);
 insert into tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)values('Martelo do Thor',1,150.00,'2099/05/20','2024/08/16','19:55:00',1);
 
-insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','19:57:00',10,2,3,4);
+insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','19:57:00',10,2,3,2);
 insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','20:01:00',3,2,3,1);
-insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','20:02:00',6,2,3,1);	
+insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)values('2024/08/16','20:02:00',6,2,3,2);	
 
 -- visualizando os registros das tabelas -- 
 select * from tbFuncionarios; 
@@ -121,3 +122,13 @@ select * from tbClientes;
 select * from tbUsuarios; 
 select * from tbProdutos; 
 select * from tbVendas; 
+
+
+-- alterando os registros das tabelas -- 
+update tbProdutos set descricao = 'Coxinha', valor = 7.00; 
+       where codProd = 1; 
+update tbProdutos set descricao = 'Pastel de Flango', valor = 10.00; 
+       where codProd = 2;
+
+-- visualizando depois das alterações -- 
+select * from tbProdutos; 	
